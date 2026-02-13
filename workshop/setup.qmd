@@ -1,0 +1,23 @@
+---
+title: "Setup"
+---
+
+## Required Software
+
+- MATLAB
+- Simulink
+- Simscape
+
+## Quick Verification
+
+1. Open MATLAB
+2. Open Simulink
+3. Add:
+   - Step block
+   - Gain block
+   - Scope
+4. Run simulation
+
+If you see output in Scope → you're ready.
+
+👉 Next: [Control Systems](control-systems.qmd)
