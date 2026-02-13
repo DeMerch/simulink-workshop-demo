@@ -1,0 +1,13 @@
+---
+title: "Control Systems Task"
+---
+
+## Goal
+
+Build a simple dynamic system and observe step response behaviour.
+
+## Steps
+
+(We will add detailed steps later.)
+
+👉 Next: [Circuit Simulation](circuit-simulation.qmd)
