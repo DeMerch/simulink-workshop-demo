@@ -1,6 +1,6 @@
 ---
-title: "Hands-on Simulink Build-Along Workshop"
-subtitle: "From control models to circuits and power systems"
+title: "Build the system: Hands-on modelling with MATLAB and SIMULINK"
+subtitle: "made by RahulB - Technical Events Officer 2026, EEESAU"
 ---
 
 ## Overview
