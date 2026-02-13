@@ -2,35 +2,48 @@
 title: "Workshop Details & Resources"
 ---
 
-## Mathematical Modelling
+## Mathematical Modelling: Linear Time-Invariant (LTI) Models
 
-In electrical engineering, mathematical modelling is the use of mathematical language and symbols to describe the behaviour and characteristics of electrical systems, components, and signals. It translates real-world electrical phenomena—like current flow, voltage potential, and electromagnetic fields—into a set of solvable equations. 
-In control engineering, the first step toward designing a controller is building an accurate mathematical model of the system.
-This process often begins with first principles modelling, where we apply fundamental physical laws — such as:
+### First Principles Modelling
+
+In electrical engineering, mathematical modelling uses mathematical language and symbols to describe the behaviour and characteristics of electrical systems, components, and signals.
+
+In control engineering, the first step toward designing a controller is building an accurate mathematical model of the system. This process often begins with **first principles modelling**, where we apply fundamental physical laws such as:
+
 - Newton’s Laws (mechanical systems)
 - Kirchhoff’s Laws (electrical circuits)
 - Conservation laws (energy, mass, charge)
+
 By translating real-world system behaviour into mathematical equations, we obtain a model that describes how inputs affect outputs.
 
 This modelling process provides:
+
 - Deeper understanding of system behaviour
 - Predictive capability under different conditions
 - A foundation for controller design
 
-What Are Linear Time-Invariant (LTI) Models?
+---
 
-Many practical engineering systems can be represented — or approximated — as Linear Time-Invariant (LTI) systems.
+### What are Linear Time-Invariant (LTI) Models?
+
+Many practical engineering systems can be represented — or approximated — as **Linear Time-Invariant (LTI)** systems.
+
 An LTI system has two key properties:
-- Linearity
-The output is proportional to the input, and the principle of superposition applies.
-- Time Invariance
-The system’s characteristics do not change over time.
+
+- **Linearity**  
+  The output is proportional to the input, and the principle of superposition applies.
+
+- **Time invariance**  
+  The system’s characteristics do not change over time.
 
 Because of these properties, LTI systems are mathematically convenient and highly powerful.
+
 They can be described using:
+
 - Differential equations
 - Transfer functions
 - State-space representations
+
 
 
 
