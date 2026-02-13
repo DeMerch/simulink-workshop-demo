@@ -1,1 +1,18 @@
+---
+title: "Workshop Overview"
+---
+
+## Welcome
+
+This is a structured, build-along Simulink workshop.
+
+## Flow of the Session
+
+1. Setup verification
+2. Control systems model
+3. Circuit simulation
+4. Power systems modelling
+5. Wrap-up
+
+👉 Start here: [Setup](setup.qmd)
 
