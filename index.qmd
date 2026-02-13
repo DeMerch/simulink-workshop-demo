@@ -32,6 +32,7 @@ You’ll follow guided instructions, experiment on your own device, and leave wi
 - Design 3-phase circuit.
 - Brief introduction on Microgrid and its components, droop control and MPPT tracking.
 - Work on an existing Microgrid file to complete its design and perform analysis.
+
 ---
 
 ## Session format
