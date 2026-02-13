@@ -1,0 +1,7 @@
+---
+title: "Power Systems Task"
+---
+
+## Goal
+
+Build a simple 3-phase model and observe waveforms.
