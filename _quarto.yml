@@ -2,20 +2,32 @@ project:
   type: website
 
 website:
-  title: "simulink-workshop-demo"
+  title: "Simulink Workshop Demo"
+
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: workshop/index.qmd
+        text: Workshop
+      - href: about.qmd
+        text: About
+
+  sidebar:
+    - title: "Workshop"
+      style: "docked"
+      contents:
+        - workshop/index.qmd
+        - workshop/setup.qmd
+        - workshop/control-systems.qmd
+        - workshop/circuit-simulation.qmd
+        - workshop/power-systems.qmd
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-    css: styles.css
+    theme: cosmo
     toc: true
+
 
 
 
