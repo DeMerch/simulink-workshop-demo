@@ -1,0 +1,9 @@
+---
+title: "Circuit Simulation Task"
+---
+
+## Goal
+
+Model an RC circuit in Simscape.
+
+(Instructions will be added.)
