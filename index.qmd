@@ -1,6 +1,6 @@
 ---
 title: "Build the system: Hands-on modelling with MATLAB and SIMULINK"
-subtitle: "made by RahulB - Technical Events Officer 2026, EEESAU"
+subtitle: "to help you get started with electrical systems modelling"
 ---
 
 ## Overview
@@ -22,18 +22,20 @@ You’ll follow guided instructions, experiment on your own device, and leave wi
 
 ---
 
-## What you’ll learn
-By the end of this session, you will be able to:
-- Translate mathematical models into **Simulink block diagrams**
-- Simulate **basic control system responses**
-- Model simple **RC/RLC circuits using Simscape**
-- Understand the structure of **three-phase power system simulations**
-- Read and interpret simulation results with confidence
-
+## How the session will go and what you’ll learn
+- Brief introduction on mathematical modelling, LTI models, Transfer Function model, State-space model.
+- LTI System modelling on MATLAB and SIMULINK.
+- Brief introduction on Control and stability concepts.
+- Build a feedback loop of an open-loop model on MATLAB.
+- Brief overview of circuit design using Simscape.
+- Design a Wien-bridge filter.
+- Design 3-phase circuit.
+- Brief introduction on Microgrid and its components, droop control and MPPT tracking.
+- Work on an existing Microgrid file to complete its design and perform analysis.
 ---
 
 ## Session format
-- **Duration:** 2 hours  
+- **Duration:** 2.5 hours  
 - **Style:** Fully interactive, build-along  
 - **Format:** Short explanations → live modelling → individual practice  
 - **Requirements:** Bring your own laptop
@@ -42,9 +44,12 @@ By the end of this session, you will be able to:
 
 ## Software requirements
 Please ensure the following are installed **before attending**:
-- MATLAB
-- Simulink
-- Simscape  
+- MATLAB 2025A or 2025B
+- Control System Toolbox Add-on
+- Simscape Add-on
+- Simscape Multibody Add-on
+- Simulink Add-on
+- Simulink Control-Design
 *(Installation guidance will be provided if needed.)*
 
 ---
@@ -59,7 +64,7 @@ This page will be used **during the session**, so keep it open while working thr
 ---
 
 ## About the event
-This workshop is organised by the **Electrical and Electronic Engineering Society (EEESAU)** as part of its technical skills development initiatives.
+This workshop is organised by the **Electrical and Electronic Engineering Society (EEESAU)** and designed by RahulB (Technical Events Officer 2026). 
 
 The goal is to help students bridge the gap between **theory taught in lectures** and **practical engineering workflows used in industry and research**.
 
