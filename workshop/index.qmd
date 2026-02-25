@@ -81,34 +81,38 @@ Parameters:
 
 ---
 
-## Governing Equation (LTI Differential Equation)
+## LTI Differential Equation Model
 
-Applying Newton’s Second Law:
-
-\[
-\sum F = m\ddot{x}
-\]
-
-For this system:
+Applying Newton's Second Law, the *equation of motion* (or governing equation) for this system is:
 
 \[
-m\ddot{x} = f_{\text{traction}} - f_{\text{friction}}
+\sum F = m\ddot{x} = f_{\text{traction}} - f_{\text{friction}} = u - b\dot{x}
 \]
 
-Assuming friction is proportional to velocity:
+Rewriting the equation gives the following **linear, time-invariant differential equation** that relates the vehicle’s travel distance \( x \) (the plant’s *output*) to the traction force \( u \) (the plant’s *input*) by way of the system parameters \( m \) and \( b \):
 
 \[
-f_{\text{friction}} = b\dot{x}
+\ddot{x} = \frac{1}{m}(u - b\dot{x})
 \]
 
-The governing equation becomes:
+By integrating the vehicle’s acceleration twice and with knowledge of its initial position and speed, this equation tells you where the vehicle will be at any instant in time.
+
+The future behaviour of a system modelled from first principles is dictated by its governing equation and initial conditions.
+
+---
+
+## Transfer Function Model
+
+Transfer functions are an alternative way of mathematically modelling a dynamic system.
+
+A transfer function gives a mathematical description of a physical system using a ratio of two polynomials in the Laplace variable \( s \).  
+The numerator polynomial represents the system’s output and the denominator polynomial represents its input.
+
+This training course will skip the derivation of the transfer function. The transfer function of the vehicle is:
 
 \[
-m\ddot{x} + b\dot{x} = u(t)
+G(s) = \frac{X(s)}{U(s)} = \frac{1}{ms^2 + bs}
 \]
-
-This equation represents a **Linear Time-Invariant (LTI)** system.
-
 
 
 
