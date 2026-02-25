@@ -115,6 +115,22 @@ modeling, analyzing, and controlling complex, multi-input/multi-output (MIMO) sy
 Find more details at:
 https://www.tutorialspoint.com/control_systems/control_systems_state_space_model.htm
 
+## What is Poles and Zeroes in Control Systems?
+Poles and zeros are key components of a system's transfer function 
+in control engineering that define its stability, frequency response, and dynamic behavior. Poles are the roots of the denominator 
+that make the system output infinite, while zeros are the roots of the numerator that make the system output zero.
+
+Poles (x): Values of that cause the transfer function to go to infinity. They determine the stability and transient response of a system.
+
+Stability: If all poles have negative real parts (left-half of s-plane), the system is stable.
+
+Response: Poles close to the imaginary axis result in slower responses, while those further away indicate faster convergence.
+
+Zeros (o): Values of that cause the transfer function to go to zero. They affect the amplitude of the frequency response.
+
+Function: Zeros can shape the system response, effectively "canceling" or reducing the influence of nearby poles.
+
+[Check out this video] (https://www.youtube.com/watch?v=AZ7_MvANy_Q){.btn .btn-primary}
 
 ## Flow of the Session
 
