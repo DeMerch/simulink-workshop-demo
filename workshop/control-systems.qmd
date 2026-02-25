@@ -89,5 +89,27 @@ sys = tf(num,den)
 
 Use the tf() function to create the variable motor_tf that models the dynamics of the electric motor as a transfer function.
 
+### Step 2
+Now that you have modeled both the vehicle body and the electric motor in MATLAB, you can combine them to form the complete plant model.
+img3
+
+In MATLAB, you can use the * operator to combine LTI objects in series. Alternatively, you can also use the series() function to achieve the same result.
+
+sys = sys1 * sys2
+sys = series(sys1, sys2)
+
+Connect the LTI models motor_tf and vehicle_ss in series. Assign the result to the variable plant.
+
+### Step 3
+You now have the complete plant model as a state-space system. Similar to what you did with the vehicle body model, you can compute the plant's response to the input of your choice.
+ 
+In this case, you will use a unit pulse at time 0 (known as the Dirac impulse, δ(t)) to generate the impulse response of the system.
+ 
+For an LTI system sys, the syntax is:
+impulse(sys)
+
+Compute and visualize the plant's impulse response using the impulse() function.
+
+[Download Task 2 File](https://drive.google.com/file/d/195fsBEs0avXXwwhFZh7dUAQFiPDEU6Cy/view?usp=sharing){.btn .btn-primary}
 
 👉 Next: [Circuit Simulation](circuit-simulation.qmd)
