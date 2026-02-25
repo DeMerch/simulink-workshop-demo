@@ -66,4 +66,28 @@ plot(tOut, 10000*y)
 
 [Download Task 1 File](https://drive.google.com/file/d/1xIV0tdpnsgsjFuwiDaFt31VrheBPaeOy/view?usp=sharing){.btn .btn-primary} 
 
+## Task 2
+
+Similar to the vehicle body, the motor can also be modeled as an LTI system. Let's assume, without going into the mathematical derivations, that the transfer function of the motor is:
+Gm(s)=12.16/16.5s+1
+
+### Step 1
+To model an LTI system as a transfer function in MATLAB, use the tf() function. 
+This function expects two inputs: the coefficients of the numerator and denominator of the transfer function, respectively, in descending order of the Laplace variable s.
+ 
+For example, to model the transfer function
+
+G(s)=(s+12s)/(2+4s+3),
+
+type the following command:
+
+num = [1 1];
+
+den = [2 4 3];
+
+sys = tf(num,den)
+
+Use the tf() function to create the variable motor_tf that models the dynamics of the electric motor as a transfer function.
+
+
 👉 Next: [Circuit Simulation](circuit-simulation.qmd)
