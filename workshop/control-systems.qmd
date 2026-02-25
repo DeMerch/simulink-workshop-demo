@@ -115,6 +115,55 @@ Compute and visualize the plant's impulse response using the impulse() function.
 [Download Task 2 File](https://drive.google.com/file/d/195fsBEs0avXXwwhFZh7dUAQFiPDEU6Cy/view?usp=sharing){.btn .btn-primary}
 
 ## Task 3
+### Step 1
+With the plant modeled, the next component in the control loop to model is the controller. A convenient way to design the controller is by specifying its pole and zero locations, resulting in a zero-pole-gain model. To create a zero-pole-gain LTI model in MATLAB, use the zpk() function.
+ 
+For instance, if an LTI system has a zero at −3, poles at −1±3i, and a scalar gain of 0.4, you can create the object using the following commands:
+
+z = -3;
+
+p = [-1+3i -1-3i];
+
+k = 0.4;
+
+sys = zpk(z, p, k)
+
+This results in the following transfer function:
+
+img4
+
+Create a zero-pole-gain model for the controller with the following specifications:
+•	A zero at -0.2
+•	Poles at [-0.7+190i; -0.7-190i]
+•	A scalar gain of 40e6
+
+Assign the result to the variable controller.
+
+### Step 2
+Now, you are ready to connect the controller in series with the plant model to form the open-loop system. Remember that the * operator in MATLAB allows you to connect multiple LTI models in series.
+
+img5
+
+Create the open-loop system by connecting the LTI models plant and controller in series. Assign the result in the variable openLoopSys.
+
+### Step 3
+The final step is to close the loop. In MATLAB, you can use the feedback() function to combine two LTI systems in a feedback loop, which is assumed to be negative by default.
+
+img6
+
+Gclosed(s) = sys1/(1+sys1⋅sys2)
+
+ 
+To build the feedback loop as shown in the following block diagram, use the following syntax:
+
+closedLoopSys = feedback(sys1, sys2)
+
+ 
+Typically, sys2 represents the sensor dynamics. However, some systems do not have a sensor modeled. In such cases, you can simply use a unity gain 1 in place of sys2.
+
+Create a negative feedback loop consisting of the open-loop and a unity gain. Assign the result to the variable closedLoopSys.
+
+[Download Task 3 File](https://drive.google.com/file/d/1lLOku9UcpunbaFNN8dwkZ2R0wKjXkRgV/view?usp=sharing){.btn .btn-primary}
 
 
 👉 Next: [Circuit Simulation](circuit-simulation.qmd)
