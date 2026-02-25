@@ -11,13 +11,16 @@ TBD
 Start with the state-space representation. 
 To create an LTI object in state-space form, use the ss() function. 
 In MATLAB, you can easily create a state-space representation of a LTI system using the following syntax:
+
 sys = ss(A,B,C,D)
+
 The state-space representation of the vehicle's dynamics:
+
 img1
 
 The variables m and b are already defined in the live script.
 
-Step 1
+### Step 1
 Create the A, B, C, and D matrices as follows:
 
 A = [0 1; 0 -b/m]
