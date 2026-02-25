@@ -114,4 +114,7 @@ Compute and visualize the plant's impulse response using the impulse() function.
 
 [Download Task 2 File](https://drive.google.com/file/d/195fsBEs0avXXwwhFZh7dUAQFiPDEU6Cy/view?usp=sharing){.btn .btn-primary}
 
+## Task 3
+
+
 👉 Next: [Circuit Simulation](circuit-simulation.qmd)
