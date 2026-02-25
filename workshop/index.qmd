@@ -105,7 +105,7 @@ The numerator polynomial represents the system’s output and the denominator po
 This training course will skip the derivation of the transfer function. The transfer function of the vehicle is:
 
 \[
-G(s) = X(s)/U(s) = \frac{1}{ms^2 + bs}
+G(s) = X(s)/U(s) = 1/ms^2 + bs
 \]
 
 
