@@ -91,11 +91,13 @@ Use the tf() function to create the variable motor_tf that models the dynamics o
 
 ### Step 2
 Now that you have modeled both the vehicle body and the electric motor in MATLAB, you can combine them to form the complete plant model.
+
 img3
 
 In MATLAB, you can use the * operator to combine LTI objects in series. Alternatively, you can also use the series() function to achieve the same result.
 
 sys = sys1 * sys2
+
 sys = series(sys1, sys2)
 
 Connect the LTI models motor_tf and vehicle_ss in series. Assign the result to the variable plant.
