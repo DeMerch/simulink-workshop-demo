@@ -46,7 +46,7 @@ They can be described using:
 
 ---
 
-## Mathematical Model of a Vehicle (Semi-Truck Example)
+## Mathematical Model of a Vehicle
 
 To make the modelling process concrete, consider the longitudinal motion of a vehicle.
 
@@ -101,13 +101,19 @@ Transfer functions are an alternative way of mathematically modelling a dynamic 
 
 A transfer function gives a mathematical description of a physical system using a ratio of two polynomials in the Laplace variable \( s \).  
 The numerator polynomial represents the system’s output and the denominator polynomial represents its input.
-
-This training course will skip the derivation of the transfer function. The transfer function of the vehicle is:
+The transfer function of the vehicle is:
 
 \[
 G(s) = X(s)/U(s) = 1/ms^2 + bs
 \]
 
+## State-space model
+A state-space model in control systems is a mathematical framework representing a physical system using a set of first-order differential or difference equations,
+tracking inputs, outputs, and internal state variables over time. It defines a system's behavior in the time domain, offering a powerful, modern method for
+modeling, analyzing, and controlling complex, multi-input/multi-output (MIMO) systems.
+
+Find more details at:
+https://www.tutorialspoint.com/control_systems/control_systems_state_space_model.htm
 
 
 ## Flow of the Session
