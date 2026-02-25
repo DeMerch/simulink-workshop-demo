@@ -130,7 +130,7 @@ Zeros (o): Values of that cause the transfer function to go to zero. They affect
 
 Function: Zeros can shape the system response, effectively "canceling" or reducing the influence of nearby poles.
 
-[Check out this video] (https://www.youtube.com/watch?v=AZ7_MvANy_Q){.btn .btn-primary}
+[Check out this video](https://www.youtube.com/watch?v=AZ7_MvANy_Q){.btn .btn-primary} 
 
 ## Flow of the Session
 
