@@ -24,30 +24,38 @@ The variables m and b are already defined in the live script.
 Create the A, B, C, and D matrices as follows:
 
 A = [0 1; 0 -b/m]
+
 B = [0; 1/m]
+
 C = [1 0]
+
 D = 0
 
  
 Then, use the ss() function to create a variable vehicle_ss that stores the state-space representation of the vehicle's longitudinal dynamics.
 
-Step 2
+### Step 2
+
 A step input signal is a common type of input signal used in control systems to test the system's dynamic response to a sudden change in input. 
 This signal instantly changes from an initial value to a final value at a specific time step.
+
 img2
+
 In MATLAB, you can use the step(sys) function to compute and visualize a system's response to a step input signal. 
 Specifically, this function will plot the system's response to a unit step input signal that changes from 0 to 1 at time 0 second.
  
 In this task, you will use the step() function to simulate the movement of a vehicle when a traction force of 1 N is applied.
 Compute and visualize the step response of the vehicle using the variable vehicle_ss.
 
-Step 3
+### Step 3
+
 The step response plot shows that the car moves with a constant force of 1 N after time 0. 
 However, in reality, a traction force of 1 N would not be sufficient to move the vehicle. This example illustrates how mathematical models may sometimes differ from physical reality.
  
 Nevertheless, the model is still useful in predicting the car's movement with larger traction forces. To find out how far the car would go with a step traction force of 10000 N, simply multiply the output by 10000, as LTI models are linear.
  
 Additionally, if you only want to view the step response for the first 10 seconds, specify it as the second input to the step function: step(sys, tFinal), where tFinal is the end time for the step response. For continuous systems like this one, the function automatically adjusts the step size and number of points from the system dynamics.
+
 To calculate the vehicle's response to a step traction force for the first 10 seconds, enter the following command:
 
 [y,tOut] = step(vehicle_ss, 10);
