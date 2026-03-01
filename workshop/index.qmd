@@ -86,12 +86,12 @@ Parameters:
 Applying Newton's Second Law, the *equation of motion* (or governing equation) for this system is:
 ∑F = mẍ = f_traction + f_friction = u-bẋ
 
-Rewriting the equation gives the following **linear, time-invariant differential equation** that relates the vehicle’s travel distance \( x \) (the plant’s *output*) to the traction force \( u \) (the plant’s *input*) by way of the system parameters \( m \) and \( b \):
+Rewriting the equation gives the following linear, time-invariant differential equation that relates the vehicle’s travel distance to the traction force by way of the system parameters \( m \) and \( b \):
 ẍ = 1/m(u-bẋ)
 
 By integrating the vehicle’s acceleration twice and with knowledge of its initial position and speed, this equation tells you where the vehicle will be at any instant in time.
 
-The future behaviour of a system modelled from first principles is dictated by its governing equation and initial conditions.
+For more information: https://au.mathworks.com/help/control/getstart/linear-lti-models.html
 
 ---
 
