@@ -97,10 +97,7 @@ For more information: https://au.mathworks.com/help/control/getstart/linear-lti-
 
 ## Transfer Function Model
 
-Transfer functions are an alternative way of mathematically modelling a dynamic system.
-
-A transfer function gives a mathematical description of a physical system using a ratio of two polynomials in the Laplace variable \( s \).  
-The numerator polynomial represents the system’s output and the denominator polynomial represents its input.
+A transfer function model is a mathematical representation that defines the relationship between the input and output of a Linear Time-Invariant (LTI) system in the frequency domain. It is expressed as a ratio of polynomials—the Laplace transform of the output divided by the input—used extensively in engineering to analyze system dynamics, stability, and control.
 The transfer function of the vehicle is:
 
 \[
