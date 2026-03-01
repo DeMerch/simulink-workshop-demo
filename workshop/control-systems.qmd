@@ -36,40 +36,35 @@ Then, use the ss() function to create a variable vehicle_ss that stores the stat
 
 ### Step 2
 
-A step input signal is a common type of input signal used in control systems to test the system's dynamic response to a sudden change in input. 
-This signal instantly changes from an initial value to a final value at a specific time step.
+To evaluate the system behaviour, apply a unit step force input.
+
+A step input represents a sudden application of constant force at time 
+𝑡 = 0.
 
 img2
 
 In MATLAB, you can use the step(sys) function to compute and visualize a system's response to a step input signal. 
 Specifically, this function will plot the system's response to a unit step input signal that changes from 0 to 1 at time 0 second.
- 
-In this task, you will use the step() function to simulate the movement of a vehicle when a traction force of 1 N is applied.
+
 Compute and visualize the step response of the vehicle using the variable vehicle_ss.
 
 ### Step 3
 
-The step response plot shows that the car moves with a constant force of 1 N after time 0. 
-However, in reality, a traction force of 1 N would not be sufficient to move the vehicle. This example illustrates how mathematical models may sometimes differ from physical reality.
- 
-Nevertheless, the model is still useful in predicting the car's movement with larger traction forces. To find out how far the car would go with a step traction force of 10000 N, simply multiply the output by 10000, as LTI models are linear.
- 
-Additionally, if you only want to view the step response for the first 10 seconds, specify it as the second input to the step function: step(sys, tFinal), where tFinal is the end time for the step response. For continuous systems like this one, the function automatically adjusts the step size and number of points from the system dynamics.
+To limit the simulation to the first 10 seconds:
+[y, tout] = step(vehicle_ss, 10);
 
-To calculate the vehicle's response to a step traction force for the first 10 seconds, enter the following command:
+You can also scale the response signal and use the plot() function to show the response:
 
-[y,tOut] = step(vehicle_ss, 10);
-
-Then, scale the response signal and use the plot() function to show the response:
-
-plot(tOut, 10000*y)
+plot(tout, 500*y)
 
 [Download Task 1 File](https://drive.google.com/file/d/1xIV0tdpnsgsjFuwiDaFt31VrheBPaeOy/view?usp=sharing){.btn .btn-primary} 
 
 ## Task 2
 
-Similar to the vehicle body, the motor can also be modeled as an LTI system. Let's assume, without going into the mathematical derivations, that the transfer function of the motor is:
-Gm(s)=12.16/16.5s+1
+In the previous exercise, you modelled the vehicle body dynamics using a state-space representation.
+
+Now we extend the model by including a simplified motor dynamics model. Similar to the vehicle body, the motor can also be modeled as an LTI system. Let's assume, without going into the mathematical derivations, that the transfer function of the motor is:
+Gm(s)= 8/(2s+1)
 
 ### Step 1
 To model an LTI system as a transfer function in MATLAB, use the tf() function. 
@@ -77,38 +72,48 @@ This function expects two inputs: the coefficients of the numerator and denomina
  
 For example, to model the transfer function
 
-G(s)=(s+12s)/(2+4s+3),
+G(s)=(s+2s)/(2+3s),
 
 type the following command:
 
-num = [1 1];
+num = [1 2];
 
-den = [2 4 3];
+den = [2 3];
 
 sys = tf(num,den)
 
-Use the tf() function to create the variable motor_tf that models the dynamics of the electric motor as a transfer function.
+To implement a transfer function in MATLAB, use the `tf()` function.
 
 ### Step 2
-Now that you have modeled both the vehicle body and the electric motor in MATLAB, you can combine them to form the complete plant model.
+The overall system consists of:
 
-img3
+Motor → Vehicle Body
 
-In MATLAB, you can use the * operator to combine LTI objects in series. Alternatively, you can also use the series() function to achieve the same result.
+When two LTI systems are connected in series, their transfer functions multiply.
+
+In MATLAB, you can combine systems using either:
 
 sys = sys1 * sys2
 
+or
+
 sys = series(sys1, sys2)
+
+img3
 
 Connect the LTI models motor_tf and vehicle_ss in series. Assign the result to the variable plant.
 
 ### Step 3
-You now have the complete plant model as a state-space system. Similar to what you did with the vehicle body model, you can compute the plant's response to the input of your choice.
- 
-In this case, you will use a unit pulse at time 0 (known as the Dirac impulse, δ(t)) to generate the impulse response of the system.
- 
-For an LTI system sys, the syntax is:
+To study the inherent dynamics of the complete plant, compute the impulse response.
+
+An impulse input (Dirac delta) represents a very short burst of force applied at time 𝑡=0.
+
+Use:
+
 impulse(sys)
+
+To limit the time window:
+impulse(sys, 10)
 
 Compute and visualize the plant's impulse response using the impulse() function.
 
@@ -116,15 +121,15 @@ Compute and visualize the plant's impulse response using the impulse() function.
 
 ## Task 3
 ### Step 1
-With the plant modeled, the next component in the control loop to model is the controller. A convenient way to design the controller is by specifying its pole and zero locations, resulting in a zero-pole-gain model. To create a zero-pole-gain LTI model in MATLAB, use the zpk() function.
+Once the plant is modelled, the next step in the control loop is to model the controller. A practical approach is to define the controller by choosing its pole and zero locations, which leads to a zero-pole-gain representation. In MATLAB, this type of LTI model is created using the zpk() function.
  
-For instance, if an LTI system has a zero at −3, poles at −1±3i, and a scalar gain of 0.4, you can create the object using the following commands:
+For instance, if an LTI system has a zero at −5, poles at −2±6i, and a scalar gain of 0.5, you can create the object using the following commands:
 
-z = -3;
+z = 5;
 
-p = [-1+3i -1-3i];
+p = [-2+6i -2-6i];
 
-k = 0.4;
+k = 0.5;
 
 sys = zpk(z, p, k)
 
@@ -133,35 +138,34 @@ This results in the following transfer function:
 img4
 
 Create a zero-pole-gain model for the controller with the following specifications:
-•	A zero at -0.2
-•	Poles at [-0.7+190i; -0.7-190i]
-•	A scalar gain of 40e6
+•	A zero at -0.5
+•	Poles at [-2+3i; -2-3i]
+•	A scalar gain of 5
 
 Assign the result to the variable controller.
 
 ### Step 2
-Now, you are ready to connect the controller in series with the plant model to form the open-loop system. Remember that the * operator in MATLAB allows you to connect multiple LTI models in series.
+You can now combine the controller and the plant to form the open-loop system. In MATLAB, the * operator is used to connect LTI models in series.
 
 img5
 
-Create the open-loop system by connecting the LTI models plant and controller in series. Assign the result in the variable openLoopSys.
+Connect the plant and controller models in series and store the resulting open-loop system in the variable openLoopPlant.
+
 
 ### Step 3
-The final step is to close the loop. In MATLAB, you can use the feedback() function to combine two LTI systems in a feedback loop, which is assumed to be negative by default.
-
-img6
-
-Gclosed(s) = sys1/(1+sys1⋅sys2)
-
+The last step is to close the control loop. In MATLAB, this is done using the `feedback()` function, which connects two LTI systems in a feedback configuration and assumes negative feedback by default.
  
-To build the feedback loop as shown in the following block diagram, use the following syntax:
+To build the feedback loop, use the following syntax:
+openLooplant = series(controller, plant);   
 
-closedLoopSys = feedback(sys1, sys2)
+Assume a unity feedback sensor (gain = 1, negative feedback by default):
 
- 
-Typically, sys2 represents the sensor dynamics. However, some systems do not have a sensor modeled. In such cases, you can simply use a unity gain 1 in place of sys2.
+closedLooplant = feedback(openLooplant, 1)
 
-Create a negative feedback loop consisting of the open-loop and a unity gain. Assign the result to the variable closedLoopSys.
+Plot a step response:
+step(closedLooplant)
+grid on
+title("Closed-loop step response")
 
 [Download Task 3 File](https://drive.google.com/file/d/1lLOku9UcpunbaFNN8dwkZ2R0wKjXkRgV/view?usp=sharing){.btn .btn-primary}
 
