@@ -139,7 +139,9 @@ img4
 
 Create a zero-pole-gain model for the controller with the following specifications:
 •	A zero at -0.5
+
 •	Poles at [-2+3i; -2-3i]
+
 •	A scalar gain of 5
 
 Assign the result to the variable controller.
