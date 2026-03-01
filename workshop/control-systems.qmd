@@ -138,6 +138,7 @@ This results in the following transfer function:
 img4
 
 Create a zero-pole-gain model for the controller with the following specifications:
+
 •	A zero at -0.5
 
 •	Poles at [-2+3i; -2-3i]
