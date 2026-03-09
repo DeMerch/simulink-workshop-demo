@@ -25,8 +25,39 @@ Connect the blocks to create a series RLC circuit. Add a Voltage sensor, PS-simu
 
 img 11
 
+The default Stop Time for a Simulink model is 10 seconds. However, the time constant for this model is
+
+τ = RC = 10⁻⁴ sec.
+
+Using the Simulink toolstrip, set the Stop Time to 4e-3.
 
 [Download Task 1 File](https://drive.google.com/file/d/1B1AguTqJaQ90lwmhiL34lKdF65TDpyYX/view?usp=sharing){.btn .btn-primary}
  
+## Task 2
+A fundamental circuit consisting of four diodes is the bridge rectifier. The terminals seen in the drawing receive a sinusoidal input.
+
+Current can only flow in one direction through the diode. As a result, for both positive and negative input voltage values, the terminal marked (+) receives a positive current. A corrected sine wave is the end product. 
+
+To know about rectifiers: https://www.allaboutcircuits.com/textbook/semiconductors/chpt-3/rectifier-circuits/
+
+Check out the diagram and make the connections.
+
+img12
+
+The components and some of their values used are:
+• AC Voltage Source (Electrical Sources): 240*sqrt(2) V
+
+• Resistor (Electrical Elements): 100 ohm
+
+• Capacitor (Electrical Elements): 1600 uF
+
+• 4 Diodes (Electrical Elements)
+
+• Voltage sensor, PS-Simulink converter, Scope, Electrical reference and Solver configuration
+
+Set the Stop time to 2/50 to depict 2 cycles and 50Hz.
+
+[Download Task 2 File](https://drive.google.com/file/d/1pjbOQMs2LdIBNsrY0S5la68ZYEQlXRBn/view?usp=sharing){.btn .btn-primary}
+
 
 (Instructions will be added.)
