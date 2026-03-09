@@ -173,4 +173,72 @@ title("Closed-loop step response")
 [Download Task 3 File](https://drive.google.com/file/d/1lLOku9UcpunbaFNN8dwkZ2R0wKjXkRgV/view?usp=sharing){.btn .btn-primary}
 
 
+## Task 4
+### Step 1
+Recall the MATLAB tasks' state-space depiction of a vehicle's longitudinal dynamics.
+
+A State-Space block can be used to model a state-space system. All you need to do is enter the A, B, C, and D matrices into the block parameters.
+
+Change the block name to Vehicle and insert a State-Space block (Simulink > Continuous).
+
+Define the A, B, C, and D matrices as follows in the block parameters dialogue box:
+
+A = [0 1; 0 -b/m]
+
+B = [0; 1/m]
+
+C = [1 0]
+
+D = 0
+
+where, b= 50 and m= 1500
+
+img 7
+
+img8
+
+After configuring the State-Space block, you can mimic its reaction to any desired stimuli (impule, ramp, step). We will use a ramp input to excite the system in this task.
+
+Connect the Ramp block to the Vehicle after inserting it. Next, connect the Vehicle's output port to the Scope block.
+
+Tip: Simulink > Sources is where you can find the Step block.
+
+### Step2
+With all the initial conditions set to zero, you have just simulated the step response of the system. Remember that dynamic systems with non-zero initial conditions can be modelled using the state-space approach.
+
+x = [ x
+      ẋ ]
+
+The longitudinal position and the vehicle body's velocity are the two dynamic states included in the vehicle model. The state vector contains them.
+Let's model the vehicle body's step response when its starting position and velocity are 10 m and 8 m/s, respectively.
+
+To access the block parameter dialogue box, double-click the State-Space block. Set [10; 8] as the initial conditions parameter.
+Set the Initial value to 8 in the Ramp block.
+
+### Step 3
+Remember that one helpful LTI representation that can return several outputs simultaneously is the state-space representation. At the moment, the model just outputs the position of the car. As you did previously in MATLAB, you can modify the C and D matrices to also output the vehicle's speed:
+img9
+
+As a result, a vector with both location and velocity signals will be returned as the State-Space's output.
+
+Update the coefficients for the C and D matrices in the State-Space block using the given equation.
+
+To view both signals on two different axes, use a Demux block and a Scope block.In the State-Space block, change the C matrix to [1 0; 0 1] and the D matrix to [0; 0]. Mark the position of the first signal and the speed of the second. To divide the output, use a Demux block from Simulink > Signal Routeing; to see the signals, use a Scope block from Simulink > Sinks.
+
+### Step 4
+Let's now model the motor dynamics. The motor was modeled as a transfer function:
+
+Gm(s) = 8 / (2s + 1)
+
+Insert a Transfer Fcn block (Simulink > Continuous) and change the block name to Motor. 
+Next, switch the denominator coefficients to [2 1] and the numerator coefficients to [8] in the block parameters dialogue box.
+
+The vehicle body and the motor are connected in sequence in the plant model. In Simulink, this is accomplished graphically by directly joining the two LTI models, but in MATLAB, you would accomplish that using the * operator (or the series function).
+
+img 10
+
+Using the accompanying diagram as a guide, make the required adjustments to connect the vehicle body and motor in series. Next, connect the Ramp block to the motor's input port and the Scope block to the speed signal (the Demux block's second output port).
+
+[Download Task 4 File](https://drive.google.com/file/d/1gHVgYdGcXe5bQcoNUHnIgEfxCdyiD4wk/view?usp=sharing){.btn .btn-primary}
+
 👉 Next: [Circuit Simulation](circuit-simulation.qmd)
