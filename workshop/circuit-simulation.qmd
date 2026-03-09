@@ -59,5 +59,6 @@ Set the Stop time to 2/50 to depict 2 cycles and 50Hz.
 
 [Download Task 2 File](https://drive.google.com/file/d/1pjbOQMs2LdIBNsrY0S5la68ZYEQlXRBn/view?usp=sharing){.btn .btn-primary}
 
+[Download Task 2 extended file showing transformer](https://drive.google.com/file/d/11oHFdxTDyAsKT1syLFKXT4jJqVi6oR5W/view?usp=sharing){.btn .btn-primary}
 
 (Instructions will be added.)
