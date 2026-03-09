@@ -4,6 +4,24 @@ title: "Circuit Simulation Task"
 
 ## Goal
 
-Model an RC circuit in Simscape.
+## Task 1
+
+We will create a simple RLC circuit first to get used to the library and components.
+Every Simscape model needs two blocks: a reference block and a Solver Configuration block. Electrical ground is represented by the Electrical Reference block in the Electrical domain.
+
+To your model, add an Electrical Reference block (Simscape > Foundation Library > Electrical > Electrical Elements) and a Solver Configuration block (Simscape > Utilities).
+
+From Simscape > Foundation Library > Electrical, add the following blocks along with their values.
+
+• DC Voltage Source (Electrical Sources): 20 V
+• Resistor (Electrical Elements): 15 ohm
+• Capacitor (Electrical Elements): 2e-5 F
+• Inductor (Electrical Elements): 3e-3 H
+
+Connect the blocks to create a series RLC circuit. Add a Voltage sensor, PS-simulink converter and a scope.
+
+img 11
+
+https://drive.google.com/file/d/1B1AguTqJaQ90lwmhiL34lKdF65TDpyYX/view?usp=sharing 
 
 (Instructions will be added.)
