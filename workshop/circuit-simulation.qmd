@@ -14,14 +14,19 @@ To your model, add an Electrical Reference block (Simscape > Foundation Library 
 From Simscape > Foundation Library > Electrical, add the following blocks along with their values.
 
 • DC Voltage Source (Electrical Sources): 20 V
+
 • Resistor (Electrical Elements): 15 ohm
+
 • Capacitor (Electrical Elements): 2e-5 F
+
 • Inductor (Electrical Elements): 3e-3 H
 
 Connect the blocks to create a series RLC circuit. Add a Voltage sensor, PS-simulink converter and a scope.
 
 img 11
 
-https://drive.google.com/file/d/1B1AguTqJaQ90lwmhiL34lKdF65TDpyYX/view?usp=sharing 
+
+[Download Task 1 File](https://drive.google.com/file/d/1B1AguTqJaQ90lwmhiL34lKdF65TDpyYX/view?usp=sharing){.btn .btn-primary}
+ 
 
 (Instructions will be added.)
