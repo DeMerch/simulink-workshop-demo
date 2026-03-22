@@ -191,9 +191,7 @@ D = 0
 
 where, b= 50 and m= 1500
 
-img 7
-
-img8
+![](images/img7.png)
 
 After configuring the State-Space block, you can mimic its reaction to any desired stimuli (impule, ramp, step). We will use a ramp input to excite the system in this task.
 
@@ -215,7 +213,8 @@ Set the Initial value to 8 in the Ramp block.
 
 ### Step 3
 Remember that one helpful LTI representation that can return several outputs simultaneously is the state-space representation. At the moment, the model just outputs the position of the car. As you did previously in MATLAB, you can modify the C and D matrices to also output the vehicle's speed:
-img9
+
+![](images/img9.png)
 
 As a result, a vector with both location and velocity signals will be returned as the State-Space's output.
 
@@ -233,10 +232,9 @@ Next, switch the denominator coefficients to [2 1] and the numerator coefficient
 
 The vehicle body and the motor are connected in sequence in the plant model. In Simulink, this is accomplished graphically by directly joining the two LTI models, but in MATLAB, you would accomplish that using the * operator (or the series function).
 
-img 10
 
 Using the accompanying diagram as a guide, make the required adjustments to connect the vehicle body and motor in series. Next, connect the Ramp block to the motor's input port and the Scope block to the speed signal (the Demux block's second output port).
 
 [Download Task 4 File](https://drive.google.com/file/d/1gHVgYdGcXe5bQcoNUHnIgEfxCdyiD4wk/view?usp=sharing){.btn .btn-primary}
 
-👉 Next: [Circuit Simulation](circuit-simulation.qmd)
+👉 Next: [Power Simulation](power-systems.qmd)
