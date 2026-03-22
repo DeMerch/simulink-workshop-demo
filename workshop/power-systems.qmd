@@ -25,7 +25,7 @@ From Simscape > Foundation Library > Electrical, add the following blocks along 
 
 Connect the blocks to create a series RLC circuit. Add a Voltage sensor, PS-simulink converter and a scope.
 
-img 11
+![](images/img11.png)
 
 The default Stop Time for a Simulink model is 10 seconds. However, the time constant for this model is
 
@@ -44,7 +44,7 @@ To know about rectifiers: https://www.allaboutcircuits.com/textbook/semiconducto
 
 Check out the diagram and make the connections.
 
-img12
+![](images/img12.png)
 
 The components and some of their values used are:
 • AC Voltage Source (Electrical Sources): 240*sqrt(2) V
@@ -85,7 +85,7 @@ RLC (Three-Phase)
 
 For future tasks, unless otherwise specified, block libraries will be referred to as relative to the Simscape > Electrical library. For example: Add the RLC (Three-Phase) block from Passive > RLC Assemblies library.
 
-img 13
+![](images/img13.png)
 
 Step 2
 
@@ -104,7 +104,7 @@ Add a Phase Splitter block and use it to connect the RLC (Three-Phase) block to 
 
 Attach a voltage sensor across A and connect its third terminal with PS-simulink converter. Connect the converter with a scope. 
 
-img 14
+![](images/img14.png)
 
 [Download Task 3 File](https://drive.google.com/file/d/1ood7-E87B2zD-j2FCiA1Xh5tnkQrtdCL/view?usp=sharing){.btn .btn-primary}
 
@@ -140,7 +140,7 @@ Create filter to lower signal distortion:
 
 • Connect the filtered measurement to another Scope via PS-Simulink converter.
 
-img15
+![](images/img15.png)
 
 [Download Task 4 File](https://drive.google.com/file/d/1C9ivs5RtTE9oE2tHM28i1yYmxYIGae8s/view?usp=sharing){.btn .btn-primary}
 
@@ -232,7 +232,7 @@ Double-click the block and choose Real power as the Output.
 
 Connect the measurement to the pu port of the generator and the Scope.
 
-img16
+![](images/img16.png)
 
 [Download Task 5 File](https://drive.google.com/file/d/1B_Xka3erDYYYdd3Zejul781kKbkM_Y2X/view?usp=sharing){.btn .btn-primary}
 
