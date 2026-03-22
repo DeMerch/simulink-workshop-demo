@@ -4,7 +4,7 @@ title: "Control Systems Task"
 
 ## Goal
 
-TBD
+To give basic idea on how control system modeling works.
 
 ## Task 1
 
