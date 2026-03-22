@@ -18,62 +18,53 @@ You’ll follow guided instructions, experiment on your own device, and leave wi
   - Control Systems
   - Circuit Analysis / Electronics
   - Power Systems
-- Beginners are welcome — no prior Simulink expertise required
+- Beginners are welcome
 
----
-
-## How the session will go and what you’ll learn
-- Brief introduction on mathematical modelling, LTI models, Transfer Function model, State-space model.
-- LTI System modelling on MATLAB and SIMULINK.
-- Brief introduction on Control and stability concepts.
-- Build a feedback loop of an open-loop model on MATLAB.
-- Brief overview of circuit design using Simscape.
-- Design a Wien-bridge filter.
-- Design 3-phase circuit.
-- Brief introduction on Microgrid and its components, droop control and MPPT tracking.
-- Work on an existing Microgrid file to complete its design and perform analysis.
 
 ---
 
 ## Session format
-- **Duration:** 2.5 hours  
+
+- **Duration:** 2.5-3 hours  
+
 - **Style:** Fully interactive, build-along  
+
 - **Format:** Short explanations → live modelling → individual practice  
+
 - **Requirements:** Bring your own laptop
 
 ---
 
 ## Software requirements
 Please ensure the following are installed **before attending**:
-- MATLAB 2025A or 2025B
+
+- MATLAB 2025A/B
+
 - Control System Toolbox Add-on
+
 - Simscape Add-on
+
 - Simscape Multibody Add-on
+
 - Simulink Add-on
+
 - Simulink Control-Design
-*(Installation guidance will be provided if needed.)*
+
+*(Installation guidance will be provided if needed during the session.)*
 
 ---
 
-## Workshop content
-The hands-on instructions, screenshots, and task breakdowns are available in the workshop wiki:
-
-👉 **[Go to the Workshop Wiki](wiki/simulink-build-lab/)**
-
-This page will be used **during the session**, so keep it open while working through the tasks.
-
----
-
-## About the event
+## About the workshop
 This workshop is organised by the **Electrical and Electronic Engineering Society (EEESAU)** and designed by RahulB (Technical Events Officer 2026). 
 
-The goal is to help students bridge the gap between **theory taught in lectures** and **practical engineering workflows used in industry and research**.
+The goal is to help students bridge the gap between **theory taught in lectures** and **practical engineering workflows used in industry and research**. 
+
+The contents are adapted from different open sources, MATLAB community and MATLAB academy for educational purposes only.  
 
 ---
 
 ## Need help?
 If you encounter issues with setup or during the session:
-- Ask a facilitator during the workshop  
-- Or refer to the troubleshooting sections in the wiki
+- Ask a volunteer during the workshop  
 
 We’re here to help — don’t hesitate to ask.
