@@ -133,9 +133,8 @@ Function: Zeros can shape the system response, effectively "canceling" or reduci
 
 1. Setup verification
 2. Control systems model
-3. Circuit simulation
-4. Power systems modelling
-5. Wrap-up
+3. Power systems modelling
+4. Wrap-up
 
 👉 Start here: [Setup](setup.qmd)
 
