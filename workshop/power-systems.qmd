@@ -117,9 +117,13 @@ Since the wye-connected configuration joins components together at a neutral poi
 Connect the blocks to power the load.
 
 Add the following blocks to measure the phase voltage:
+
 • Phase Voltage Sensor (Three-Phase) (Sensors & Transducers)
+
 • Grounded Neutral (Three-Phase) (Connectors & References)
+
 • PS-Simulink Converter (Simscape > Utilities)
+
 • Scope (Simulink > Sinks)
 
 Make the appropriate connections and connect the measurement to the Scope block.
@@ -127,12 +131,109 @@ Make the appropriate connections and connect the measurement to the Scope block.
 Add a Power Sensor (Three-Phase) block to the model from the Sensors & Transducers library. Connect it in series with the source and load.
 
 Create filter to lower signal distortion:
+
 • Add a Sum block (Simulink > Math Operations) and a Discrete-Time Integrator block (Simulink > Discrete) to the model.
+
 • Change the List of signs to |+- in order to calculate a difference. Make the connections shown to filter your measurement.
+
 • Change the model Stop Time to 10.
+
 • Connect the filtered measurement to another Scope via PS-Simulink converter.
+
+img15
 
 [Download Task 4 File](https://drive.google.com/file/d/1C9ivs5RtTE9oE2tHM28i1yYmxYIGae8s/view?usp=sharing){.btn .btn-primary}
 
+## Task 5
+
+Salient Pole:
+
+• Add a Synchronous Machine Salient Pole block (Electromechanical > Synchronous) and a Wye-Connected Load block (Passive > RLC Assemblies).
+
+• Set the Zero sequence parameter of the Synchronous Machine Salient Pole to Exclude. 
+
+• Connect the load to the generator using the ~ ports.
+
+• Ground the load using an Electrical Reference block (Connectors & References).
+
+Know more about Salient Pole block: https://au.mathworks.com/help/releases/R2025a/sps/ref/synchronousmachinesalientpole.html#bt1vyu7-1_sep_mw_81ae1ff4-ce5f-418e-ac13-a1be2fffb0a2  
+
+The microgrid will be powered by 5 MVA generators with a rated voltage of 4160 V. The active load is 2 MW. Parameterize the machine and load as listed. If a parameter is not given for a block, leave the default value.
+
+Wye-Connected Load
+
+• Rated voltage 4160 V.
+
+• Real power 2e6 W.
+
+Synchronous Machine Salient Pole
+
+• Rated apparent power 5e6 A*V
+
+• Rated voltage 4160 V
+
+• Number of pole pairs 4
+
+• Specify parameterization by Standard parameters
+
+Set the relevant initial conditions for the Synchronous Machine Salient Pole block.
+
+• Terminal voltage magnitude 4160 V
+
+• Active power generated 1e6 A*V
+
+Field circuit:
+
+• Add the Synchronous Machine Field Circuit block (Electromechanical > Synchronous) to the model.
+
+• Set the PS input and output unit to Per unit.
+
+• In the Main section of the Block Parameters dialog, set the parameters to match the generator
+   • Rated apparent power 5e6 A*V
+   • Field circuit current 1000 A
+
+• In the Machine Parameters section, change Specify parameterization by to Standard parameters.
+
+• Connect the fd+ and fd- ports of the field circuit and generator blocks.
+
+Add the following mechanical rotational blocks to your model:
+• Ideal Angular Velocity Source (Simscape Foundation Library > Mechanical > Mechanical Sources)
+
+• Mechanical Rotational Reference (Simscape Foundation Library > Mechanical > Rotational Elements)
+
+• Machine Inertia (Electromechanical > Mechanical)
+
+Change the Machine Inertia parameters to match the generator:
+
+• Rated apparent power 5e6 A*V
+
+• Number of pole pairs 4
+
+Connect the R ports of the Ideal Angular Velocity Source and the Machine Inertia blocks to the R port of the Synchronous Machine Salient Pole block.
+
+Connect the Mechanical Rotational Reference block to the C ports of the source and generator.
+
+If you have not already done so, connect the Solver Configuration block to the physical network.
+
+Constants:
+• Add two Constant blocks (Simulink > Sources) and two Simulink-PS Converter blocks to your model.
+
+• Connect the blocks to drive the field circuit and the angular velocity input.
+
+• Set the Constant value for the block driving the field circuit to 4.5.
+
+• Set the Constant value for the block driving the angular velocity to 2*pi*60/4 (60 Hz frequency and 4 pole pairs).
+
+• It is good practice to set the units for the Simulink-PS Converter blocks. The inputs are 1 (since per-unit is unitless) for the field circuit and rad/s for the angular velocity.
+
+Add a Synchronous Machine Measurement block and a PS-Simulink Converter block to your model.
+
+Double-click the block and choose Real power as the Output.
+
+Connect the measurement to the pu port of the generator and the Scope.
+
+img16
+
+[Download Task 5 File](https://drive.google.com/file/d/1B_Xka3erDYYYdd3Zejul781kKbkM_Y2X/view?usp=sharing){.btn .btn-primary}
 
 
