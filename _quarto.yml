@@ -20,7 +20,6 @@ website:
         - workshop/index.qmd
         - workshop/setup.qmd
         - workshop/control-systems.qmd
-        - workshop/circuit-simulation.qmd
         - workshop/power-systems.qmd
 
 format:
