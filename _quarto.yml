@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Simulink Workshop Demo"
+  title: "Build the System: Hands-On Modelling with MATLAB & Simulink"
 
   navbar:
     left:
@@ -10,8 +10,6 @@ website:
         text: Home
       - href: workshop/index.qmd
         text: Workshop
-      - href: about.qmd
-        text: About
 
   sidebar:
     - title: "Workshop"
