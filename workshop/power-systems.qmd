@@ -25,7 +25,7 @@ From Simscape > Foundation Library > Electrical, add the following blocks along 
 
 Connect the blocks to create a series RLC circuit. Add a Voltage sensor, PS-simulink converter and a scope.
 
-![](images/img11.png)
+![](images/img11a.png)
 
 The default Stop Time for a Simulink model is 10 seconds. However, the time constant for this model is
 
