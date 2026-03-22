@@ -106,4 +106,33 @@ Attach a voltage sensor across A and connect its third terminal with PS-simulink
 
 img 14
 
+[Download Task 3 File](https://drive.google.com/file/d/1ood7-E87B2zD-j2FCiA1Xh5tnkQrtdCL/view?usp=sharing){.btn .btn-primary}
+
 ## Task 4
+
+Add a Wye-Connected Load block (Passive > RLC Assemblies) to the model. Set the Rated voltage to 240 V to match the source voltage. Change the Component structure of the Wye-Connected Load block to R-L. Leave the default value of 1e2 A*V for Inductive reactive power and Real power default value of 1e3 W.
+
+Since the wye-connected configuration joins components together at a neutral point, the block has a single-phase port. Add an Electrical Reference block from the Connectors & References library.
+
+Connect the blocks to power the load.
+
+Add the following blocks to measure the phase voltage:
+• Phase Voltage Sensor (Three-Phase) (Sensors & Transducers)
+• Grounded Neutral (Three-Phase) (Connectors & References)
+• PS-Simulink Converter (Simscape > Utilities)
+• Scope (Simulink > Sinks)
+
+Make the appropriate connections and connect the measurement to the Scope block.
+
+Add a Power Sensor (Three-Phase) block to the model from the Sensors & Transducers library. Connect it in series with the source and load.
+
+Create filter to lower signal distortion:
+• Add a Sum block (Simulink > Math Operations) and a Discrete-Time Integrator block (Simulink > Discrete) to the model.
+• Change the List of signs to |+- in order to calculate a difference. Make the connections shown to filter your measurement.
+• Change the model Stop Time to 10.
+• Connect the filtered measurement to another Scope via PS-Simulink converter.
+
+[Download Task 4 File](https://drive.google.com/file/d/1C9ivs5RtTE9oE2tHM28i1yYmxYIGae8s/view?usp=sharing){.btn .btn-primary}
+
+
+
