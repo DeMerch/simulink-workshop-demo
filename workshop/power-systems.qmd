@@ -236,4 +236,14 @@ img16
 
 [Download Task 5 File](https://drive.google.com/file/d/1B_Xka3erDYYYdd3Zejul781kKbkM_Y2X/view?usp=sharing){.btn .btn-primary}
 
+## Microgrid
 
+Till now, you have gone through some of the basic components that makes up a microgrid. To understand how the system works, go through the following concepts:
+
+• AC droop control: https://au.mathworks.com/discovery/droop-control.html
+• Maximum Power Point Tracking: https://www.solarquotes.com.au/inverters/mppt/
+• DC to AC inverter: https://www.youtube.com/watch?v=z6gJG63Ft7o 
+
+Let's explore a microgrid together..
+
+[Download File](https://drive.google.com/file/d/1WH21CPEYOfh1KgJCo6WH0L80nHmBfEsj/view?usp=sharing){.btn .btn-primary}
