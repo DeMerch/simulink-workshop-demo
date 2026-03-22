@@ -1,5 +1,5 @@
 ---
-title: "Workshop Details & Resources"
+title: "Some Workshop basics"
 ---
 
 ## Mathematical Modelling: Linear Time-Invariant (LTI) Models
