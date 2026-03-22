@@ -16,7 +16,7 @@ sys = ss(A,B,C,D)
 
 The state-space representation of the vehicle's dynamics:
 
-![](workshop/images/img1.png)
+![](images/img1.png)
 
 The variables m and b are already defined in the live script.
 
