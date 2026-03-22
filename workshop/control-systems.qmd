@@ -18,8 +18,6 @@ The state-space representation of the vehicle's dynamics:
 
 ![State-space representation of the vehicle dynamics](images/img1.png){width=60%}
 
-The variables m and b are already defined in the live script.
-
 ### Step 1
 Create the A, B, C, and D matrices as follows:
 
@@ -41,7 +39,7 @@ To evaluate the system behaviour, apply a unit step force input.
 A step input represents a sudden application of constant force at time 
 𝑡 = 0.
 
-img2
+![](images/img2.png)
 
 In MATLAB, you can use the step(sys) function to compute and visualize a system's response to a step input signal. 
 Specifically, this function will plot the system's response to a unit step input signal that changes from 0 to 1 at time 0 second.
@@ -99,7 +97,7 @@ or
 
 sys = series(sys1, sys2)
 
-img3
+![](images/img3.png)
 
 Connect the LTI models motor_tf and vehicle_ss in series. Assign the result to the variable plant.
 
@@ -125,7 +123,7 @@ Once the plant is modelled, the next step in the control loop is to model the co
  
 For instance, if an LTI system has a zero at −5, poles at −2±6i, and a scalar gain of 0.5, you can create the object using the following commands:
 
-z = 5;
+z = -5;
 
 p = [-2+6i -2-6i];
 
@@ -135,7 +133,7 @@ sys = zpk(z, p, k)
 
 This results in the following transfer function:
 
-img4
+![](images/img4.png)
 
 Create a zero-pole-gain model for the controller with the following specifications:
 
@@ -150,7 +148,7 @@ Assign the result to the variable controller.
 ### Step 2
 You can now combine the controller and the plant to form the open-loop system. In MATLAB, the * operator is used to connect LTI models in series.
 
-img5
+![](images/img5.png)
 
 Connect the plant and controller models in series and store the resulting open-loop system in the variable openLoopPlant.
 
