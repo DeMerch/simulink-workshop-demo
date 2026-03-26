@@ -161,7 +161,7 @@ openLooplant = series(controller, plant);
 
 Assume a unity feedback sensor (gain = 1, negative feedback by default):
 
-closedLooplant = feedback(openLooplant, 1)
+closedLooplant = feedback(openLoopPlant, 1)
 
 Plot a step response:
 
