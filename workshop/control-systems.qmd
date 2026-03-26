@@ -164,8 +164,11 @@ Assume a unity feedback sensor (gain = 1, negative feedback by default):
 closedLooplant = feedback(openLooplant, 1)
 
 Plot a step response:
+
 step(closedLooplant)
+
 grid on
+
 title("Closed-loop step response")
 
 [Download Task 3 File](https://drive.google.com/file/d/1lLOku9UcpunbaFNN8dwkZ2R0wKjXkRgV/view?usp=sharing){.btn .btn-primary}
