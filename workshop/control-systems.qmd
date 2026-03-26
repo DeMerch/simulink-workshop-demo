@@ -200,10 +200,10 @@ After configuring the State-Space block, you can mimic its reaction to any desir
 
 Connect the Ramp block to the Vehicle after inserting it. Next, connect the Vehicle's output port to the Scope block.
 
-Tip: Simulink > Sources is where you can find the Step block.
+Tip: Simulink > Sources is where you can find the Ramp block.
 
 ### Step2
-With all the initial conditions set to zero, you have just simulated the step response of the system. Remember that dynamic systems with non-zero initial conditions can be modelled using the state-space approach.
+With all the initial conditions set to zero, you have just simulated the Ramp response of the system. Remember that dynamic systems with non-zero initial conditions can be modelled using the state-space approach.
 
 x = [ x
       ẋ ]
